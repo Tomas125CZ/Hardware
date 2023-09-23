@@ -1,0 +1,448 @@
+:root {
+    --color: rgb(255, 255, 255);
+    --color2: rgb(230, 230, 230);
+    --topColor: rgb(220, 220, 220);
+    --topColorDarker: rgb(210, 210, 210);
+    --textColor: black;
+    --hoverTextColor: rgb(180, 180, 180);
+    --opacity: 1;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to left, var(--color), var(--color2), var(--color));
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+.menu {
+    width: 100%;
+    background-color: var(--topColor);
+}
+
+.buttons div {
+    animation-name: opAnim;
+    animation-duration: 1s;
+    animation-fill-mode: inherit;
+}
+
+@keyframes nameAnim {
+    100% {
+        background-position: 310px;
+    }
+}
+
+.content > div:nth-child(2) {
+    animation-name: opAnim;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opAnim {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.content > div:nth-child(1) {
+    animation-name: textAnim;
+    animation-duration: 1s;
+    animation-fill-mode: inherit;
+}
+
+@keyframes textAnim {
+    from {
+        padding-right: 1000px;
+        margin-left: -1000px;
+    }
+    to {
+        padding-right: 0px;
+        margin-left: 0px;
+    }
+}
+
+.websiteName {
+    width: fit-content;
+    font-size: 30px;
+    -webkit-text-stroke: 1.5px white;
+    background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 50px;
+    transform: translate(0%, 30%);
+    text-align: center;
+    margin: auto;
+    animation-name: nameAnim;
+    animation-duration: 2s;
+    animation-fill-mode: linear;
+    animation-iteration-count: infinite;
+}
+
+.websiteName:hover {
+    cursor: pointer;
+}
+
+.buttons {
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    width: 100%;
+    height: 60px;
+    background-color: var(--topColor);
+    color: var(--textColor);
+}
+
+.button p {
+    font-size: 20px;
+    text-align: center;
+    transform: translate(0, 80%);
+}
+
+.focused {
+    background-color: var(--topColorDarker);
+}
+
+.button:hover {
+    background-color: var(--topColorDarker);
+    cursor: pointer;
+}
+
+.znacky {
+    margin-top: 150px;
+    width: 1000px;
+    height: 350px;
+    margin-left: calc((100% - 1000px)/2);
+    text-align: center;
+    overflow: hidden;
+}
+
+.animated {
+    display: flex;
+}
+
+.znacky img {
+    width: 200px;
+    height: 200px;
+}
+
+.leftZ, .rightZ {
+    color: var(--textColor); 
+    font-size: 25px;
+}
+
+.leftZ {
+    margin-left: calc(1000px/3);
+    animation-name: leftAnim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.znacky {
+    display: flex;
+}
+
+.copyZ {
+    margin-left: calc((1000px/3)/4);
+    animation-name: leftAnim2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    color: var(--textColor);
+    font-size: 25px;
+}
+
+.copyZ img {
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes leftAnim2 {
+    from {
+        margin-left: calc((1000px/3)/4);
+    }
+    to {
+        margin-left: calc((1000px/3)/4 - calc(1000px/3));
+    }
+}
+
+@keyframes leftAnim {
+    from {
+        margin-left: 0;
+    }   
+    to {
+        margin-left: -33%;
+    }
+}
+
+.midZ img {
+    animation-name: midAnim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.rightZ img {
+    animation-name: rightAnim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rightFontAnim {
+    from {
+        font-size: 25px;
+        color: var(--textColor);
+    }
+    to {
+        font-size: 30px;
+        color: var(--textColor);
+    }
+}
+
+@keyframes midFontAnim {
+    from {
+        font-size: 30px;
+        color: var(--textColor);
+    }
+    to {
+        font-size: 25px;
+        color: var(--textColor);
+    }
+}
+
+
+@keyframes rightAnim {
+    from {
+        width: 200px;
+        height: 200px;
+    }
+    to {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@keyframes midAnim {
+    from {
+        width: 300px;
+        height: 300px;
+    }
+    to {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.leftZ, .rightZ, .midZ {
+    width: calc(1000px/3);
+}
+
+.rightZ {
+    animation-name: rightFontAnim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.midZ {
+    color: var(--textColor);
+    font-size: 30px;
+    animation-name: midFontAnim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.midZ img {
+    width: 300px;
+    height: 300px;
+}
+
+.leftZ img:hover, .midZ img:hover, .rightZ img:hover, .copyZ img:hover {
+    cursor: pointer;
+}
+
+.animatedIMG {
+    width: 400px;
+    margin: auto;
+    animation-name: imgAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes imgAnimation {
+    from {
+        margin-top: 0px;
+    }
+    to {
+        margin-top: calc(100%/1.5);
+    }
+}
+
+.animatedIMG img {
+    width: 400px;
+}
+
+.webImg {
+    width: 400px;
+    margin: auto;
+    animation-name: webImgAnim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.webImg img {
+    width: 400px;
+}
+
+@keyframes webImgAnim {
+    from {
+        margin-top: -260px;
+    }
+    to {
+        margin-top: 100px;
+    }
+}
+
+.content {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    color: var(--textColor);
+}
+
+.content ul p {
+    font-weight: bolder;
+    font-size: larger;
+    margin-top: 30px;
+}
+
+.content div {
+    width: 95%;
+}
+
+.biggerImg img {
+    width: 100%;
+}
+
+.biggerImg {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.content > div:nth-child(1) {
+    padding: 0px 10px;
+}
+
+.content div:nth-child(2) img {
+    width: 75%;
+    margin-left: 17.5%;
+    opacity: var(--opacity);
+}
+
+.content div:nth-child(2) p {
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 7px;
+}
+
+.content div:nth-child(2) {
+    margin-top: 20px;
+}
+
+.content div:nth-child(2) > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.content div:nth-child(2) > div div {
+    flex-direction: column;
+}
+
+.content div:nth-child(2) div:nth-child(1) {
+    margin-left: -10px;
+}
+
+.content div:nth-child(2) img:hover {
+    cursor: pointer;
+}
+
+.switcher {
+    position: absolute;
+    right: 15px;
+    top: 10px;  
+}
+
+.switcher:hover {
+    cursor: pointer;
+}
+
+.switcher img {
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    .buttons {
+        width: 60%;
+        flex-direction: row;
+    }
+
+    .button {
+        width: calc(100%/5);
+    }
+    .content div {
+        width: 50%;
+    }
+    .content {
+        flex-direction: row;
+    }
+    .content div:nth-child(2) {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        overflow:auto;
+    }
+}
+
+.zdrojeChange {
+    margin-left: 20px;
+}
+
+.zdrojeChange:hover {
+    cursor: pointer;
+}
+
+.zdroje {
+    margin-top: 30px;
+    font-size: larger;
+    color: var(--textColor);
+    margin-bottom: 30px;
+}
+
+.zdroje a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.zdroje a:hover {
+    color: var(--hoverTextColor);
+}
+
+.zdrojeChange::selection {
+    color: var(--textColor);
+    background-color: var(--color);
+}

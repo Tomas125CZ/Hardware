@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Grafické karty</title>
+</head>
+<body onload="start()">
+    <div class="menu">
+        <div class="websiteName" onclick="openWebsite('index.html')">
+            Grafické karty
+        </div>
+        <div class="buttons">
+            <div class="button" onclick="openWebsite('soucastky.html')"><p>Součástky</p></div>
+            <div class="button" onclick="openWebsite('prenosy.html')"><p>Přenosy</p></div>
+            <div class="button" onclick="openWebsite('chlazeni.html')"><p>Chlazení</p></div>
+            <div class="button" onclick="openWebsite('omezeni.html')"><p>Omezení</p></div>
+            <div class="button focused"><p>Výrobci</p></div>
+        </div>
+        <div class="switcher" onclick="changeColor()">
+            <img src="images/moon.png" alt="">
+        </div>
+    </div>  
+    <div class="znacky">
+        <div class="animated">
+            <div class="leftZ">
+                <img src="images/intel.png">
+                <div>Intel</div>
+            </div>
+            <div class="midZ">
+                <img src="images/nvidia.png" alt="">
+                <div>Nvidia</div>
+            </div>
+            <div class="rightZ">
+                <img src="images/amd.png" alt="">
+                <div>AMD</div>
+            </div>
+        </div>
+        <div class="copyZ">
+            <img src="images/intel.png" alt="">
+            <div>Intel</div>
+        </div>
+    </div>
+</body>
+</html>

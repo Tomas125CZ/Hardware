@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Grafické karty</title>
+</head>
+<body onload="start(), hideZdroje()">
+    <div class="biggerImg">
+
+    </div>
+    <div class="menu">
+        <div class="websiteName" onclick="openWebsite('index.html')">
+            Grafické karty
+        </div>
+        <div class="buttons">
+            <div class="button" onclick="openWebsite('soucastky.html')"><p>Součástky</p></div>
+            <div class="button" onclick="openWebsite('prenosy.html')"><p>Přenosy</p></div>
+            <div class="button focused"><p>Chlazení</p></div>
+            <div class="button" onclick="openWebsite('omezeni.html')"><p>Omezení</p></div>
+            <div class="button" onclick="openWebsite('vyrobci.html')"><p>Výrobci</p></div>
+        </div>
+        <div class="switcher" onclick="changeColor()">
+            <img src="images/moon.png" alt="">
+        </div>
+    </div> 
+    <div class="content">
+        <div>
+            <ul>
+                <li>
+                    <p>Aktivní vs. pasivní chlazení</p> Existují dva hlavní typy chlazení grafických karet. Aktivní chlazení využívá ventilátorů, které odvádějí teplo pryč z karty. Pasivní chlazení se spoléhá na hromadění tepelné energie a její přenos mimo kartu bez použití ventilátorů.
+                </li>
+                <li>
+                    <p>Chladicí bloky</p> Chladicí bloky jsou často používány u pokročilých grafických karet, zejména u modelů navržených pro přetaktování (overclocking). Tyto bloky se obvykle skládají z měděné nebo hliníkové základny s trubkami nebo lamelami, které odvádějí teplo pryč od grafického procesoru.
+                </li>
+                <li>
+                    <p>Ventilátory</p> Většina moderních grafických karet je vybavena jedním nebo více ventilátory. Tyto ventilátory jsou navrženy tak, aby dodávaly chladný vzduch do chladicího bloku a odváděly horký vzduch pryč z karty. Některé grafické karty mají také pokročilé systémy řízení ventilátorů, které optimalizují otáčky ventilátorů v závislosti na teplotě karty.
+                </li>
+                <li>
+                    <p>Tepelné pasty</p> Tepelná pasta se často používá k vylepšení přenosu tepla mezi grafickým procesorem a chladicím blokem. Tepelná pasta pomáhá eliminovat vzduchové mezery mezi povrchem procesoru a chladicím blokem, což zlepšuje efektivitu chlazení.
+                </li>
+                <li>
+                    <p>Vodní chlazení</p> Některé nadšenecké grafické karty nabízejí možnost vodního chlazení. Toto chlazení využívá uzavřený okruh s chladicím blokem, který je napojen na čerpadlo a radiátor s ventilátory. Vodní chlazení může poskytnout vyšší výkon a nižší teploty než tradiční chlazení vzduchem, ale vyžaduje speciální instalaci a údržbu.
+                </li>
+            </ul>
+        </div>
+        <div>
+            <img id="1" src="images/vodnichladic.png" alt="" onclick="showImage('vodnichladic', '1')">
+            <p>Vodní chlazení</p>
+        </div>
+    </div>
+    <div class="zdroje">
+        <span class="zdrojeChange" onclick="changeZdroje()">Zobrazit zdroje</span>
+        <div class="zdrojeList">
+            <ul>
+                <li><a href="https://cs.wikipedia.org/wiki/Grafická_karta" target="_blank">https://cs.wikipedia.org/wiki/Grafická_karta</li>
+                <li><a href="https://www.google.com/aclk?sa=l&ai=DChcSEwi8hOaz_vz-AhXanWgJHcqjAicYABADGgJ3Zg&ase=2&sig=AOD64_3o-4LOz5t9M7v9t7RXDBCqueQcdw&ctype=5&nis=5&adurl&ved=2ahUKEwiQ0NGz_vz-AhWa7bsIHTE2DvEQvhd6BAgBEFM" target="_blank">Obrázek</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

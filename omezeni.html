@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Grafické karty</title>
+</head>
+<body onload="start(), hideZdroje()">
+    <div class="biggerImg">
+
+    </div>
+    <div class="menu">
+        <div class="websiteName" onclick="openWebsite('index.html')">
+            Grafické karty
+        </div>
+        <div class="buttons">
+            <div class="button" onclick="openWebsite('soucastky.html')"><p>Součástky</p></div>
+            <div class="button" onclick="openWebsite('prenosy.html')"><p>Přenosy</p></div>
+            <div class="button" onclick="openWebsite('chlazeni.html')"><p>Chlazení</p></div>
+            <div class="button focused"><p>Omezení</p></div>
+            <div class="button" onclick="openWebsite('vyrobci.html')"><p>Výrobci</p></div>
+        </div>
+        <div class="switcher" onclick="changeColor()">
+            <img src="images/moon.png" alt="">
+        </div>
+    </div>
+    <div class="content">
+        <div style="width: 100%;">
+            <ul>
+                <li>
+                    <p>Návrh grafické karty</p>  Grafické karty jsou roztříděny do řad (nižší, střední, vyšší, HIGH-END) a na tom závisí jejich výkon.
+                </li>
+                <li>
+                    <p>Výkonem CPU</p>  Podle výkonu grafiky je potřeba výkonné CPU, aby byla schopna dodat potřebná data.
+                </li>
+                <li>
+                    <p>Velikostí a frekvenci operační paměti</p>  Načíst data z paměti trvá podstatně kratší dobu než z HDD.
+                </li>
+                <li>
+                    <p>Rychlostí slotu</p>  To se projevuje hlavně při CF nebo SLI u PCI-Express slotu 1.1, kde při zapojení 16 × 16 linek nestačí přenosová rychlost.
+                </li>
+                <li>
+                    <p>Ovladače</p>  starají se o to, aby grafická karta pracovala na plný výkon. bývají často nedoladěné, problémy řeší až novější verze.
+                </li>
+                <li>
+                    <p>Zdroj</p> Pokud máte slabý zdroj, nemusí dodat dostatek elektrické energie počítači a díky tomu se PC chová nestabilně a nepodává maximální možný výkon.
+                </li>
+                <li>
+                    <p>Nedostatečné chlazení </p>  Pokud máte na grafické kartě nedostatečné chlazení, může dojít k přehřátí pamětí, napájecích obvodů nebo dalších součástí. Moderní grafický čip má ochranu proti přehřátí, jako CPU, která při dosažení určité teploty přepne kartu do 2D režimu.
+                </li>
+                <li>
+                    <p>Software</p>  V současné době je nejlepším příkladem software Mantle (oproti OpenGL a zejména DirectX), při jehož použití dochází k odlehčení CPU a/nebo řádovému zvýšení výkonu
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="zdroje">
+        <span class="zdrojeChange" onclick="changeZdroje()">Zobrazit zdroje</span>
+        <div class="zdrojeList">
+            <ul>
+                <li><a href="https://cs.wikipedia.org/wiki/Grafická_karta" target="_blank">https://cs.wikipedia.org/wiki/Grafická_karta</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

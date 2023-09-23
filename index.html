@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Grafické karty</title>
+</head>
+<body onload="start(), hideZdroje()">
+    <div class="biggerImg">
+
+    </div>
+    <div class="menu">
+        <div class="websiteName" onclick="openWebsite('index.html')">
+            Grafické karty
+        </div>
+        <div class="buttons">
+            <div class="button" onclick="openWebsite('soucastky.html')"><p>Součástky</p></div>
+            <div class="button" onclick="openWebsite('prenosy.html')"><p>Přenosy</p></div>
+            <div class="button" onclick="openWebsite('chlazeni.html')"><p>Chlazení</p></div>
+            <div class="button" onclick="openWebsite('omezeni.html')"><p>Omezení</p></div>
+            <div class="button" onclick="openWebsite('vyrobci.html')"><p>Výrobci</p></div>
+        </div>
+        <div class="switcher" onclick="changeColor()">
+            <img src="images/moon.png" alt="">
+        </div>
+    </div>  
+    <div class="content">
+        <div>
+            <ul>
+                <li>
+                    <p>Grafické procesory (GPU)</p>  Hlavním komponentem grafické karty je grafický procesor, známý také jako GPU (Graphics Processing Unit). GPU je specializovaný čip navržený pro rychlé zpracování grafiky a 3D vizualizaci. Moderní GPU jsou schopny zpracovávat obrovské množství dat a provádět složité výpočty paralelně.
+                </li>
+                <li>
+                    <p>Ray tracing</p>  Jednou z nejnovějších a nejzajímavějších technologií v oblasti grafických karet je ray tracing. Tato technologie umožňuje vytvářet fotorealistické scény simulací chování světla a jeho interakce s objekty. Ray tracing je extrémně náročný na výpočetní výkon a vyžaduje pokročilé GPU.
+                </li>
+                <li>
+                    <p>VR (virtuální realita)</p>  Grafické karty mají klíčovou roli v rozvoji virtuální reality. Pro plynulý a realistický zážitek ve virtuálním prostředí je potřeba vysoký výpočetní výkon a rychlá grafika. Moderní grafické karty jsou vybaveny speciálními funkcemi pro podporu VR, jako je například technologie Nvidia VRWorks.
+                </li>
+                <li>
+                    <p>Dobývání kryptoměn</p>  Grafické karty se staly důležitým nástrojem pro těžbu kryptoměn, jako je například Bitcoin. Kvůli svému vysokému výpočetnímu výkonu jsou grafické karty schopny efektivně provádět matematické operace potřebné pro těžbu kryptoměn. V minulosti to vedlo k nedostatku grafických karet na trhu, protože těžaři je masivně nakupovali.
+                </li>
+                <li>
+                    <p>Progresivní obnovování obrazu (Progressive Refresh)</p>  Tato technologie, známá také jako Adaptive Sync nebo Variable Refresh Rate (VRR), umožňuje synchronizovat obnovovací frekvenci obrazovky s rychlostí vykreslování grafické karty. To eliminuje problémy jako je roztrhání obrazu (screen tearing) a zajišťuje hladší a plynulejší zobrazení.
+                </li>
+                <li>
+                    <p>Paralelní výpočty</p>  Grafické karty jsou navrženy tak, aby prováděly paralelní výpočty. Díky velkému počtu shader jednotek a jiných specializovaných jednotek jsou schopny rychle zpracovávat
+                </li>
+            </ul>
+        </div>
+        <div>
+            <div style="width: 95%;">
+                <div>
+                    <img id="1" src="images/3060.png" alt="" onclick="showImage('3060', '1')">
+                    <p>RTX 3060 Ti</p>
+                </div>
+                <div>
+                    <img id="2" src="images/2080.png" alt="" onclick="showImage('2080', '2')">
+                    <p>RTX 2080</p>
+                </div>
+            </div>
+            <div style="width: 95%;">
+                <div>
+                    <img id="3" src="images/1080.png" alt="" onclick="showImage('1080', '3')">
+                    <p>GTX 1080 Ti</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="zdroje">
+        <span class="zdrojeChange" onclick="changeZdroje()">Zobrazit zdroje</span>
+        <div class="zdrojeList">
+            <ul>
+                <li><a href="https://cs.wikipedia.org/wiki/Grafická_karta" target="_blank">https://cs.wikipedia.org/wiki/Grafická_karta</li>
+                <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Faukro.cz%2Fgraficka-karta-hp-nvidia-rtx-3060-ti-oem-8gb-gddr6-bez-lhr-7003125055&psig=AOvVaw2htuRXLAF2ZulZ73ek1YkC&ust=1684435106688000&source=images&cd=vfe&ved=0CBEQjRxqGAoTCJjKmfT__P4CFQAAAAAdAAAAABCNAg" target="_blank">RTX 3060 Ti</li>
+                <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mironet.cz%2Fgainward-geforce-rtx-2080-15151710mhz-8gb-gddr6-7ghz-256bit-1x-hdmi1x-usbc3x-dp-215w86pin%2Bdp377427%2F&psig=AOvVaw2eWEefey1T7Vk1TKlyL6jq&ust=1684435189169000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNj5ppuA_f4CFQAAAAAdAAAAABAG" target="_blank">RTX 2080</li>
+                <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mironet.cz%2Fmsi-geforce-gtx1080-ti-gaming-x-11g-14801683mhz-11gb-d5x-1124-mhz-352bit-dvi-2x-hdmi-2x-dp-250w-86%2Bdp320140%2F&psig=AOvVaw2htuRXLAF2ZulZ73ek1YkC&ust=1684435106688000&source=images&cd=vfe&ved=0CBEQjRxqGAoTCJjKmfT__P4CFQAAAAAdAAAAABD7AQ" target="_blank">GTX 1080 Ti</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

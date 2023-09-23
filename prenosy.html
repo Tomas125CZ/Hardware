@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Grafické karty</title>
+</head>
+<body onload="start(), hideZdroje()">
+    <div class="biggerImg">
+
+    </div>
+    <div class="menu">
+        <div class="websiteName" onclick="openWebsite('index.html')">
+            Grafické karty
+        </div>
+        <div class="buttons">
+            <div class="button" onclick="openWebsite('soucastky.html')"><p>Součástky</p></div>
+            <div class="button focused"><p>Přenosy</p></div>
+            <div class="button" onclick="openWebsite('chlazeni.html')"><p>Chlazení</p></div>
+            <div class="button" onclick="openWebsite('omezeni.html')"><p>Omezení</p></div>
+            <div class="button" onclick="openWebsite('vyrobci.html')"><p>Výrobci</p></div>
+        </div>
+        <div class="switcher" onclick="changeColor()">
+            <img src="images/moon.png" alt="">
+        </div>
+    </div>  
+    <div class="content">
+        <div>
+            <ul>
+                <li>
+                    <p>VGA</p>  VGA je nejstarším a stále používaným konektorem. Jedná se o konektor analogový a hodil se tedy spíše ke starším CRT monitorům, které zpracovávaly signál analogově. Grafická karta musela původní digitální signál nejprve převést na analogový a ten dále pokračoval do zobrazovacího zařízení (kde je v modernějších monitorech znovu digitalizován). VGA konektor je již v dnešní době zastaralý a výrobci jej nakonec úplně odstranili z nových grafických karet. Slabinou tohoto konektoru bylo maximální rozlišení 2048 × 1536 pixelů, které bylo na většině monitorů dále omezeno na 1600 × 1200 pixelů a nemožnost současného přenosu obrazu a zvuku.
+                </li>
+                <li>
+                    <p>DVI</p>  Digital Video Interface (DVI) konektor vznikl kvůli potřebě přenášet do monitoru digitální signál, aby novější monitory typu LCD, nemusely převádět analogový signál zpět na digitální (což je problém VGA konektoru). <br> Běžně se můžeme setkat s dvěma typy konektoru DVI. Prvním je DVI-D, který je čistě digitální a druhým pak DVI-I, který disponuje jak digitálním, tak i analogovým signálem, který může být pomocí jednoduché redukce vyveden do monitoru s klasickým VGA konektorem. Zvláštností je DVI-A, který je pouze analogový. Všechny tři typy se rovněž vyskytují jako single a dual link. Single link je většinou omezený na maximální rozlišení 1920 × 1200 pixelů, dual pak na 2560 × 1600 pixelů, avšak potřebuje speciální typ kabelu
+                </li>
+                <li>
+                    <p>HDMI</p>  HDMI konektor je používán zejména pro multimediální zařízení, jako je televizor, DVD a Blu-ray přehrávače, herní konzole apod. Konektor HDMI byl představen v roce 2002 a prošel několika změnami. Současná verze je HDMI 2.1. Výhodou oproti DVI je možnost přenosu až osmi zvukových kanálů spolu s obrazem. Rozlišení je omezeno na 4096 × 2160 pixelů.
+                </li>
+                <li>
+                    <p>Display port</p>  Nejnovějším konektorem je takzvaný DisplayPort, který byl představen roku 2009. Je navržen tak, aby nahradil digitální (DVI) i analogové (VGA) konektory v monitorech počítačů stejně jako v grafických kartách. Má všechny funkce HDMI, ale nepředpokládá se, že by měl HDMI nahradit v oblasti domácí spotřební elektroniky, protože je určen spíše pro kancelářské a IT využití.
+                </li>
+            </ul>
+        </div>
+        <div>
+            <div style="width: 95%;">
+                <div>
+                    <img id="1" src="images/vga.png" alt="" onclick="showImage('vga', '1')">
+                    <p>VGA</p>
+                </div>
+                <div>
+                    <img id="2" src="images/dvi.png" alt="" onclick="showImage('dvi', '2')">
+                    <p>DVI</p>
+                </div>
+            </div>
+            <div style="width: 95%;">
+                <div>
+                    <img id="3" src="images/hdmi.png" alt="" onclick="showImage('hdmi', '3')">
+                    <p>HDMI</p>
+                </div>
+                <div>
+                    <img id="4" src="images/displayport.png" alt="" onclick="showImage('displayport', '4')">
+                    <p>DisplayPort</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="zdroje">
+        <span class="zdrojeChange" onclick="changeZdroje()">Zobrazit zdroje</span>
+        <div class="zdrojeList">
+            <ul>
+                <li><a href="https://cs.wikipedia.org/wiki/Grafická_karta" target="_blank">https://cs.wikipedia.org/wiki/Grafická_karta</li>
+                <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.eracomp.cz%2Fvga-kabel-propojovaci-1-8-m-cerny-1733&psig=AOvVaw3fq0QYtwOo0ao6KQNkeqij&ust=1684431217622000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNCW87Xx_P4CFQAAAAAdAAAAABAK" target="_blank">VGA Obrázek</li>
+                <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.taktrochujineelektro.cz%2Fvga--dvi--hdmi-kabely%2Fpremiumcord-dvi-d-prodluzovaci-kabel-dual-link-dvi-24-1--mf--2m%2F&psig=AOvVaw3-FECW73qPF496zJWzXJqU&ust=1684431278655000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJC1-tLx_P4CFQAAAAAdAAAAABAk" target="_blank">DVI Obrázek</li>
+                <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.syntex.cz%2Fhdmi-kabel-2-0b-uhd-4k-high-speed-ethernet-3-0m&psig=AOvVaw0NDyK3dhpUgfmJ6S_W817s&ust=1684431350252000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLirgvXx_P4CFQAAAAAdAAAAABBI" target="_blank">HDMI Obrázek</li>
+                <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcs.wikipedia.org%2Fwiki%2FDisplayPort&psig=AOvVaw2XmQ7i_JkyhoddiwNk_Uag&ust=1684431408924000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKjPhZHy_P4CFQAAAAAdAAAAABAG" target="_blank">DisplayPort Obrázek</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

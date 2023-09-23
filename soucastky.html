@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Grafické karty</title>
+</head>
+<body onload="start(), hideZdroje()">
+    <div class="biggerImg">
+
+    </div>
+    <div class="menu">
+        <div class="websiteName" onclick="openWebsite('index.html')">
+            Grafické karty
+        </div>
+        <div class="buttons">
+            <div class="button focused"><p>Součástky</p></div>
+            <div class="button" onclick="openWebsite('prenosy.html')"><p>Přenosy</p></div>
+            <div class="button" onclick="openWebsite('chlazeni.html')"><p>Chlazení</p></div>
+            <div class="button" onclick="openWebsite('omezeni.html')"><p>Omezení</p></div>
+            <div class="button" onclick="openWebsite('vyrobci.html')"><p>Výrobci</p></div>
+        </div>
+        <div class="switcher" onclick="changeColor()">
+            <img src="images/moon.png" alt="">
+        </div>
+    </div> 
+    <div class="content">
+        <div>
+            <ul>
+                <li>
+                    <p>Unifikované shadery</p>  moderní náhrada za pixelové jednotky. Jsou programovatelné a díky tomu nemusí počítat pouze zobrazovaná data, ale i výpočty pro vědu a další (GPGPU, viz například OpenCL, DirectCompute, CUDA). V současné době (2014) jde v podstatě o RISC procesory. Shadery AMD (architektura GCN) se dále dělí na skalární (celočíselnou) a vektorovou část (pohyblivou řádovou čárku).
+                </li>
+                <li>
+                    <p>Řadič pamětí</p>  stará se o komunikaci mezi grafickou pamětí a GPU. NVIDIA i AMD podporují až GDDR6.
+                </li>
+                <li>
+                    <p>TMU jednotky (Texture mapping unit)</p>  mapuje textury na objekty.
+                </li>
+                <li>
+                    <p>ROP jednotky (Render Output unit)</p>  zabezpečuje výstup dat z grafické karty.
+                </li>
+                <li>
+                    <p>Paměť</p>  zde jsou ukládány informace potřebné pro činnost GPU.
+                </li>
+            </ul>
+        </div>
+        <div>
+            <img id="1" src="images/popis.png" alt="" onclick="showImage('popis', '1')">
+        </div>
+    </div>
+    <div class="zdroje">
+        <span class="zdrojeChange" onclick="changeZdroje()">Zobrazit zdroje</span>
+        <div class="zdrojeList">
+            <ul>
+                <li><a href="https://cs.wikipedia.org/wiki/Grafická_karta" target="_blank">https://cs.wikipedia.org/wiki/Grafická_karta</li>
+                <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fweb.tobynet.cz%2Fobsah%2Fkomponenty%2Fgpu.php&psig=AOvVaw1hbcgGff2ZK_x2Cc6W5OMB&ust=1684424855747000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLCKqdzZ_P4CFQAAAAAdAAAAABAJ" target="_blank">Obrázek</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
